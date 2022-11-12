@@ -11,7 +11,7 @@ class LoginController extends Controller
 {
     public function index()
     {
-        return redirect()->away('https://sso.uiii.ac.id/login');
+        return redirect()->away('https://sso.uiii.ac.id/');
     }
 
     public function auth(Request $request)
@@ -63,6 +63,6 @@ class LoginController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect()->away('https://sso.uiii.ac.id/login');
+        return redirect()->away('https://sso.uiii.ac.id/');
     }
 }
